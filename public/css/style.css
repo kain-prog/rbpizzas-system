@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@500&family=Roboto:ital@1&display=swap');
+
+@font-face {
+    font-family: 'Bookman';
+    src: url(../fonts/Bookman\ Old\ Style\ Std\ Bold.otf) format('opentype')
+}
+
+body{
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+main{
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    min-height: calc(100vh - 145px)
+}
+
+.logo{
+    text-decoration: none;
+}
+
+.login-header h3{
+    font-family: 'Bookman';
+    text-shadow: 0 0 8px yellow;
+    font-weight: 600;
+}
+
+.login-title{
+    font-family: 'Bookman';
+    text-shadow: 0 0 1px yellow;
+}
+
+.btn-login{
+    letter-spacing: 3px;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'Bookman';
+}
+
+.font{
+    font-size: 19px;
+    font-family: 'Bookman';
+}
+
+.f1{
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+.f2{
+    margin-top: -20px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 2px black;
+}
+
+.menu li a{
+    text-decoration: none;
+}
+
+.encomendas{
+    align-items: flex-start!important;
+    justify-content: start!important;
+}
+
+.encomendas h2{
+    font-family: 'Bookman';
+    text-shadow: 0 0 1px yellow;
+}
+
+.encomendas form .input-group-text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.del-post{
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 5px;
+}
+
+
+.kain p{
+    font-weight: 700;
+}
+
+.kain a{
+    font-size: 1.1rem;
+    font-family: 'Orbitron';
+    text-decoration: none;
+    color: rgb(230, 20, 20);
+    text-shadow: 0 0 1px rgb(0, 0, 0);
+    transition: all 0.4s ease ;
+}
+
+.kain a:hover{
+    color: rgb(14, 105, 14);
+}
+
+#sabor{
+    max-width: 16em!important;
+}
+
+#data{
+    max-width: 11em!important;
+}
+
+
+@media (max-width:991px) {
+
+    main{
+        min-height: calc(100vh - 200px)
+    }
+    
+    .quant{
+        width: 100%!important;
+    }
+
+    #sabor{
+        max-width: 100%!important;
+    }
+
+    #data{
+        max-width: 100%!important;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer p{
+        font-size: 12px;
+        margin-bottom: -2px;
+    }
+
+    footer a{
+        font-size: 0.9rem!important;
+    }
+
+}
+
+@media (max-width:360px) {
+
+    body{
+        min-height: 100vh;
+    }
+
+    .menu{
+        margin-left: -35px;
+    }
+    .menu li a{
+        font-size: 12px;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer p{
+        font-size: 12px;
+        margin-bottom: -2px;
+    }
+
+    footer a{
+        font-size: 0.9rem!important;
+    }
+}

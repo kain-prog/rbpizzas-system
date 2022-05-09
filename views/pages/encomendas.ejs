@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include ('../partials/head'); %>
+
+<body>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+      <div class="container-fluid container">
+        <a class="d-flex m-auto align-items-center logo" href="#">
+          <img src="img/Logo R&B Pizzas.png" alt="" width="55" height="67" class="d-inline-block align-text-top">
+          <article class="d-flex flex-column align-items-center mx-3">
+              <p class="font f1 text-black">R&B</p>
+              <p class="font f2 text-warning">Pizza's</p>
+          </article>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarText">    
+            <ul class="d-flex menu my-auto" >
+                <li class="mx-1 d-flex align-items-center"><a class="btn btn-warning disabled" href=""><i class="fa-solid fa-pizza-slice mx-2"></i>Encomendas</a></li>
+                <li class="mx-1 d-flex align-items-center"><a class="btn btn-warning" href="/registros"><i class="fa-solid fa-calendar-days mx-2"></i>Registrados</a></li>
+                <li class="mx-1 d-flex align-items-center"><a class="btn btn-danger" href="/"><i class="fa-solid fa-right-from-bracket mx-2"></i>Logout</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="encomendas">
+    <section class="container ">
+        <article class="py-5">
+            <h2>Novas Encomendas</h2>
+        </article>
+        <article>
+            <form action="/registros" method="POST" class="row row-cols-lg-auto g-1 align-items-center" id="encomendas">
+                <article class="col-12">
+                  <label class="visually-hidden" for="inlineFormInputGroupUsername">Cliente</label>
+                  <article class="input-group">
+                    <article class="input-group-text bg-warning">Cliente:</article>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome do Cliente" value="<%=body.nome %>" required >
+                  </article>
+                </article>
+                
+                <article class="col-12">
+                    <label class="visually-hidden" for="inlineFormInputGroupUsername">Sabores</label>
+                    <article class="input-group">
+                      <article class="input-group-text bg-warning"> Sabor: </article>
+                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                      <select class="form-select" id="sabor" name="sabor" required>
+                        <option>Escolha um Sabor</option>
+                        <option value="mussarela">Mussarela</option>
+                        <option value="calabresa">Calabresa</option>
+                        <option value="presunto">Presunto</option>
+                        <option value="presunto-com-mussarela">[M] Presunto com Mussarela</option>
+                        <option value="presunto-com-calabresa">[M] Presunto com Calabresa</option>
+                        <option value="calabresa-com-mussarela">[M] Calabresa com Mussarela</option>
+                      </select>
+                    </article>
+                </article>
+                
+                <article class="col-12 quant" style="width: 245px;">
+                  <label class="visually-hidden" for="inlineFormInputGroupUsername">Quantidade</label>
+                  <article class="input-group">
+                    <article class="input-group-text bg-warning"> Quantidade: </article>
+                    <input type="number" class="form-control px-2" id="quantidade" name="quantidade" placeholder="Quantidade" value="<%=body.quantidade %>" required>
+                  </article>
+                </article>
+
+                <article class="col-12">
+                  <label class="visually-hidden" for="inlineFormInputGroupUsername">Data</label>
+                  <article class="input-group">
+                    <article class="input-group-text bg-warning"> Data: </article>
+                    <input type="datetime-local" class="form-control" name="data" id="data" value="<%=body.data %>" required>
+                  </article>
+                </article>
+
+                
+                <article>
+                  <button onclick="enviarAlerta()" type="submit" class="send-order btn btn-primary my-3 mx-0">Registrar Pedido</button>  
+
+                  <!-- <% if(error) { %>
+
+                    <article class="alert alert-danger alert-dimissible mt-3">
+                      <strong>Erro: </strong> <%= error.message %> 
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&times;</button>
+                    </article>
+                  <% } else { %>
+
+                  <article class="alert alert-success alert-dimissible mt-3">
+                    <strong><%= 'Pedido Realizado com Sucesso!' %></strong>
+                    <a type="button" data-bs-dismiss="alert" aria-label="Close">&times;</a>
+                  </article>
+                  <% } %> -->
+
+                </article>
+              </form>
+        </article>  
+      </section>
+  </main>
+
+    
+  <%- include('../partials/footer'); %>
+
+  <%- include('../partials/scripts'); %>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include ('../partials/head'); %>
+
+<body>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+      <div class="container-fluid container">
+        <a class="d-flex m-auto align-items-center logo" href="#">
+          <img src="img/Logo R&B Pizzas.png" alt="" width="55" height="67" class="d-inline-block align-text-top">
+          <article class="d-flex flex-column align-items-center mx-3">
+              <p class="font f1 text-black">R&B</p>
+              <p class="font f2 text-warning">Pizza's</p>
+          </article>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarText">    
+            <ul class="d-flex menu my-auto" >
+                <li class="mx-1 d-flex align-items-center"><a class="btn btn-warning disabled" href=""><i class="fa-solid fa-pizza-slice mx-2"></i>Encomendas</a></li>
+                <li class="mx-1 d-flex align-items-center"><a class="btn btn-warning disabled" href=""><i class="fa-solid fa-calendar-days mx-2"></i>Registrados</a></li>
+                <li class="mx-1 d-flex align-items-center"><a class="btn btn-danger disabled" href=""><i class="fa-solid fa-right-from-bracket mx-2"></i>Logout</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+ 
+
+  <main>
+      <section class="container">
+        <article class="py-2">
+            <article class="rounded-3 mx-auto autocard text-white bg-danger bg-opacity-85 pb-2" style="max-width: 24rem;height: 29rem;">
+              <article class="card-header">Bem-Vindo</article>
+              <article class="card-body">
+                <article class="mx-auto">
+                <img src="img/Logo R&B Pizzas.png" alt="" width="75" height="90" class="mx-auto d-flex mb-4">
+                </article>
+              <div>
+                <h2 class="login-title">Seja bem-vindo, Roberto</h2>
+                <p class="text-center">Vamos começar o dia ?</p>
+              </div>
+              <div>
+                <button onclick="encomendas()" class="btn-login btn btn-warning w-100 py-4">Entrar</a>
+              </div>
+              </article>
+            </article>
+        </article>
+      </section>
+    </main>
+
+    
+    <%- include('../partials/footer'); %>
+
+    <%- include('../partials/scripts'); %>
+</body>
+</html>

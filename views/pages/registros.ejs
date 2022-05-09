@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('../partials/head'); %>
+
+<body>  
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <div class="container-fluid container">
+            <a class="d-flex m-auto align-items-center logo" href="#">
+            <img src="img/Logo R&B Pizzas.png" alt="" width="55" height="67" class="d-inline-block align-text-top">
+            <article class="d-flex flex-column align-items-center mx-3">
+                <p class="font f1 text-black">R&B</p>
+                <p class="font f2 text-warning">Pizza's</p>
+            </article>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarText">    
+                <ul class="d-flex menu my-auto" >
+                    <li class="mx-1 d-flex align-items-center"><a class="btn btn-warning" href="/encomendas"><i class="fa-solid fa-pizza-slice mx-2"></i>Encomendas</a></li>
+                    <li class="mx-1 d-flex align-items-center"><a class="btn btn-warning disabled" href=""><i class="fa-solid fa-calendar-days mx-2"></i>Registrados</a></li>
+                    <li class="mx-1 d-flex align-items-center"><a class="btn btn-danger" href="/"><i class="fa-solid fa-right-from-bracket mx-2"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+  </header>
+
+  <main class="encomendas">
+      <section class="container ">
+          <article class="py-5">
+              <h2>Pedidos Registrados</h2>
+          </article>
+
+          <table class="table table-striped table-hover">
+              <thead>
+                  <tr>
+                      <th scope="col">Cliente</th>
+                      <th scope="col">Sabor</th>
+                      <th scope="col">Quantidade</th>
+                      <th scope="col">Data</th>
+                  </tr>
+              </thead>
+              <tbody id="comming">
+
+                <% for(let i=0; i < posts.length; i++) { %>
+                    <tr id="<%=posts[i]._id%>">
+                        <th scope="row"><%=posts[i].nome%></th>
+                        <td><%=posts[i].sabor%></td>
+                        <td><%=posts[i].quantidade%></td>
+                        <td><%=posts[i].data%></td>
+                        <td onclick="delClick('<%= posts[i]._id%>')" class="btn-close del-post"></td>
+                    </tr>
+                <%} %>
+              </tbody>
+          </table>
+      </section>
+  </main>
+
+  <%- include('../partials/footer'); %>
+
+  <%- include('../partials/scripts'); %>
+</body>
+</html>
