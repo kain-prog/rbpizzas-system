@@ -2,11 +2,9 @@ Page with EJS - rbpizzas-order-system <br>
 
 https://kain-prog.github.io/rbpizzas-system/
 
-<img src="./public/img/home-page.PNG" alt="Página home(principal)"> 
-<img src="./public/img/services.PNG" alt="Página de serviços com cards"> 
-<img src="./public/img/products.PNG" alt="Página de produtos com carousel de produtos"> 
-<img src="./public/img/contacts.PNG" alt="Página de contatos com google maps e forms"> 
-<img src="./public/img/responsive.PNG" alt="Página layout responsivo"> 
+<img src="./public/img/login-img.PNG" alt="Página home(principal)"> 
+<img src="./public/img/encomendas-img.PNG" alt="Página de criação de encomendas"> 
+<img src="./public/img/registrados-img.PNG" alt="Página de todos os registros de encomendas realizadas"> 
 
 > Resultado do Portifólio finalizado.
 
