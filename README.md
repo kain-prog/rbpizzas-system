@@ -17,7 +17,7 @@ O projeto foi criado em:
 - [x] Criação do Bootstrap
 - [x] Criação do Template EJS
 - [x] Criação do Back-End com NodeJS
-- [x] Criação do Banco de dados Mongoose (AWS).
+- [x] Criação do Banco de dados Mongoose-Atlas (MongoCloud).
 
 Resultado: https://rbpizzas-system.herokuapp.com/
 
