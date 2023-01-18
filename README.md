@@ -1,6 +1,6 @@
 Page with EJS - rbpizzas-order-system <br>
 
-https://rbpizzas-system.herokuapp.com/
+https://rbpizzas-system.onrender.com/
 
 <img src="./public/img/login-img.PNG" alt="Página home(principal)"> 
 <img src="./public/img/encomendas-img.PNG" alt="Página de criação de encomendas"> 
@@ -19,7 +19,7 @@ O projeto foi criado em:
 - [x] Criação do Back-End com NodeJS
 - [x] Criação do Banco de dados Mongoose-Atlas (MongoCloud).
 
-Resultado: https://rbpizzas-system.herokuapp.com/
+Resultado: https://rbpizzas-system.onrender.com/
 
 ## 🤝 Colaboradores
 
